@@ -1,5 +1,4 @@
 import express from 'express';
-import cors from 'cors';
 import dotenv from 'dotenv';
 import OpenAI from 'openai';
 import path from 'node:path';
@@ -12,7 +11,6 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const app = express();
 const port = Number(process.env.PORT || 3000);
-const corsOrigin = process.env.CORS_ORIGIN || '*';
 
 if (!process.env.OPENAI_API_KEY) {
   console.warn('WARNING: OPENAI_API_KEY is not configured. /api/chat will not work until you set it.');
@@ -22,7 +20,6 @@ const client = process.env.OPENAI_API_KEY
   ? new OpenAI({ apiKey: process.env.OPENAI_API_KEY })
   : null;
 
-app.use(cors({ origin: corsOrigin === '*' ? true : corsOrigin }));
 app.use(express.json({ limit: '256kb' }));
 
 // Small in-memory protection against accidental request floods.
