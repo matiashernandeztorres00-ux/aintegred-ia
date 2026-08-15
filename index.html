@@ -1017,7 +1017,7 @@
                                     <i x-show="chat.pinned" class="fa-solid fa-thumbtack text-blue-300 text-xs" style="display: none;"></i>
                                     <span class="text-sm font-bold truncate drop-shadow" x-text="chat.title">holaa</span>
                                 </div>
-                                <p class="text-[11px] leading-snug text-gray-300 mt-1 line-clamp-2 drop-shadow" x-text="chat.summary">Error: Insufficient credits</p>
+                                <p class="text-[11px] leading-snug text-gray-300 mt-1 line-clamp-2 drop-shadow" x-text="chat.summary">Asistente inteligente</p>
                             </div>
                             <span @click.stop="open = !open" class="px-2 py-1 z-10 cursor-pointer rounded hover:bg-white/10 text-gray-300 hover:text-white">
                                 <i class="fa-solid fa-ellipsis-vertical drop-shadow"></i>
@@ -1077,7 +1077,7 @@
         <div class="h-16 border-b border-white/10 flex items-center justify-between px-8 bg-black/10 flex-shrink-0 backdrop-blur-sm shadow-[0_4px_24px_0_rgba(0,0,0,0.05)]">
             <div class="min-w-0">
                 <h1 class="font-bold text-xl text-white tracking-tight drop-shadow-md truncate" x-text="getCurrentChat() ? getCurrentChat().title : 'Aintegred'">holaa</h1>
-                <p class="text-xs text-gray-300 truncate" x-text="getCurrentChat() ? getCurrentChat().summary : 'Asistente inteligente'">Error: Insufficient credits</p>
+                <p class="text-xs text-gray-300 truncate" x-text="getCurrentChat() ? getCurrentChat().summary : 'Asistente inteligente'">Asistente inteligente</p>
             </div>
             <div class="flex items-center gap-2">
                 <button @click="shareChat()" class="w-10 h-10 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 text-white transition-all cursor-pointer" title="Compartir chat" aria-label="Compartir chat">
@@ -1282,7 +1282,7 @@
 
                                 <template x-if="msg.type === 'error'">
                                     <div class="text-red-300 text-sm whitespace-pre-wrap leading-relaxed drop-shadow-sm" x-text="msg.content"></div>
-                                </template><div class="text-red-300 text-sm whitespace-pre-wrap leading-relaxed drop-shadow-sm" x-text="msg.content">Error: Insufficient credits</div>
+                                </template><div class="text-red-300 text-sm whitespace-pre-wrap leading-relaxed drop-shadow-sm" x-text="msg.content">Asistente inteligente</div>
 
                                 <!-- Barra compacta de acciones para texto, imágenes y videos (solo IA) -->
                                 <div x-show="msg.role === 'assistant'" class="mt-3 border-t border-white/10 pt-2" x-data="{ showEdit: false, editPrompt: '' }">
@@ -1414,7 +1414,7 @@
 
                                 <template x-if="msg.type === 'error'">
                                     <div class="text-red-300 text-sm whitespace-pre-wrap leading-relaxed drop-shadow-sm" x-text="msg.content"></div>
-                                </template><div class="text-red-300 text-sm whitespace-pre-wrap leading-relaxed drop-shadow-sm" x-text="msg.content">Error: Insufficient credits</div>
+                                </template><div class="text-red-300 text-sm whitespace-pre-wrap leading-relaxed drop-shadow-sm" x-text="msg.content">Asistente inteligente</div>
 
                                 <!-- Barra compacta de acciones para texto, imágenes y videos (solo IA) -->
                                 <div x-show="msg.role === 'assistant'" class="mt-3 border-t border-white/10 pt-2" x-data="{ showEdit: false, editPrompt: '' }">
